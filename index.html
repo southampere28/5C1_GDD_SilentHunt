@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>The Silent Hunt: Lost Team&#x27;s Fight for Survival</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="16008d94-f2cc-8075-9bd6-ee91790689c1" class="page sans"><header><img class="page-cover-image" src="Snipaste_2024-12-18_18-38-49%201.png" style="object-position:center 91.03999999999999%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Snipaste_2024-12-18_18-38-49%202.png"/></div><h1 class="page-title">The Silent Hunt: Lost Team&#x27;s Fight for Survival</h1><p class="page-description"></p></header><div class="page-body"><figure id="e438f415-aefe-44ff-9453-e8d3ef4f67a0" class="image"><a href="Snipaste_2024-12-18_18-38-49.png"><img style="width:336px" src="Snipaste_2024-12-18_18-38-49.png"/></a></figure><p id="dc5366d4-539b-4398-a320-36fa5da7df9b" class="">Terjebak disebuah desa tua tak berpenghuni, empat orang mencoba memperbaiki mobil mereka untuk keluar dari desa yang dihuni oleh monster menyeramkan. Pilih salah satu sisi dan masuklah ke dunia multiplayer yang penuh ketegangan horror.<br/>Pemain bermain dalam tampilan third-person. Tujuan Survivors dalam setiap permainan adalah untuk meperbaiki mobil mereka yang rusak untuk melarikan diri dari desa menyeramkan ini tanpa tertangkap oleh monster. Tujuan monster untuk menangkap seluruh survivor dan mencegah mereka kabur dari desa.<br/></p><h2 id="16008d94-f2cc-80d0-884c-e50f60967f5e" class=""><strong>Genre</strong></h2><ul id="c6c03d54-55f6-4ddc-9086-7e063be3b04e" class="bulleted-list"><li style="list-style-type:disc">Multiplayer</li></ul><ul id="35825b9a-49f9-4570-bfd6-f5df89ac362e" class="bulleted-list"><li style="list-style-type:disc">Survival Horror</li></ul><ul id="31949e46-a968-4a7b-8322-60f9695bcc19" class="bulleted-list"><li style="list-style-type:disc">Online Co-Op</li></ul><ul id="16008d94-f2cc-8026-93fc-f4bf1a23d68e" class="bulleted-list"><li style="list-style-type:disc">Hide &amp; Seek</li></ul><ul id="141107fa-0661-4896-9f62-695d273ccad4" class="bulleted-list"><li style="list-style-type:disc">Third Person</li></ul><ul id="9e53aec9-4ef1-41d2-95fd-5ac526445310" class="bulleted-list"><li style="list-style-type:disc">Mature</li></ul><ul id="8fee1aae-79af-4e85-8eb4-a44952408340" class="bulleted-list"><li style="list-style-type:disc">Action</li></ul><ul id="74ef73b6-eead-4579-99c8-29db1548b62e" class="bulleted-list"><li style="list-style-type:disc">Stealth</li></ul><h2 id="16008d94-f2cc-80ad-b6d0-fbd61222acdc" class=""><strong>Elemen Game</strong></h2><ol type="1" id="16008d94-f2cc-80c5-bdb2-e33735dbe2d0" class="numbered-list" start="1"><li>👾 Monster : menghindari monster yang juga merupakan player dengan strategi dan kerja sama tim.</li></ol><ol type="1" id="16008d94-f2cc-8045-b5d6-d8904b101721" class="numbered-list" start="2"><li>🪙 Resource : mengumpulkan komponen-komponen mobil yang rusak seperti ban, accu, radiator, dan lain sebagainya sesuai dengan kerusakannya.</li></ol><ol type="1" id="16008d94-f2cc-8079-bdbf-f88f13893f5a" class="numbered-list" start="3"><li>🪛 Repair : memperbaiki mobil dengan komponen yang ditemukan.</li></ol><ol type="1" id="16008d94-f2cc-80ca-8738-d45da375de5a" class="numbered-list" start="4"><li>🛡️ Defend : menggunakan alat sederhana untuk melindungi diri atau mengalihkan perhatian monster.</li></ol><ol type="1" id="16008d94-f2cc-803b-a0ce-e717fbf10c33" class="numbered-list" start="5"><li>⚔️ Hunt : memburu player survivor yang bersembunyi.</li></ol><ol type="1" id="16008d94-f2cc-800c-9319-f860e351b2eb" class="numbered-list" start="6"><li>🗣️ Interaction : berinteraksi dengan monster NPC untuk bantuan navigasi.</li></ol><ol type="1" id="16008d94-f2cc-806b-98c4-f9b50e712e53" class="numbered-list" start="7"><li>🪤 Trap : penggunaan jebakan untuk menyerang survivor.</li></ol><h2 id="16008d94-f2cc-80a1-976e-c484a97deb24" class=""><strong>Pemain</strong></h2><p id="fea3464f-8012-4f7f-bfb8-bb2507cb9333" class=""><strong>Jumlah Pemain :</strong> 5 (1 Monster, 4 Survivor dan beberapa Monster npc)</p><p id="eea26f2c-e99b-46b5-86e8-d3c099e53ca1" class=""><strong>Mode : </strong>Multiplayer online asimetris dengan elemen co-op untuk survivor.</p><p id="f2c8281e-5bbc-4ddc-b09e-fef103ce6dc4" class=""><strong>Peran Pemain :</strong><div class="indented"><ol type="1" id="cec852d2-31ba-4338-8a4d-2085a60778df" class="numbered-list" start="1"><li>Monster Pemburu (Dreadhorn) :  Serang Survivor<figure id="16108d94-f2cc-806d-9886-db707ed24fe3" class="image" style="text-align:left"><a href="monster_char_2.jpg"><img style="width:144px" src="monster_char_2.jpg"/></a></figure><p id="b6ad7a33-b870-4235-a633-d8d3fb984c38" class="">Ciri-Ciri Monster :<br/>Berbadan besar, memiliki mata berwarna merah, gigi bertaring, memiliki 2 tanduk seperti rusa, kuku tajam dan bulu yang lebat.<br/></p></li></ol><ol type="1" id="16108d94-f2cc-80ff-b062-c722ac986605" class="numbered-list" start="2"><li>Survivor : Mencari komponen mobil, bekerja sama, menyelamatkan rekan, serang monster, melarikan diri dari pemburu.<p id="55098b0a-7818-4afe-a1d1-9448355fc929" class=""> Ciri-Ciri Survivor :</p><ol type="a" id="489470d1-62e4-4e73-88eb-ca4ed8435881" class="numbered-list" start="1"><li>Survivor 1 (Glint) : Seorang Pria yang memiliki skill dapat membuat benda yang dicari terlihat/transparan, Pendek, Kurus, memakai kemeja dan celana cargo, membawa tas ransel, berkacamata, memakai jam dan headlamp<figure id="16008d94-f2cc-80a2-8fb7-db5ae1f6b0a5" class="image" style="text-align:left"><a href="freepik__make-a-survivor-game-character-that-have-backpack-__90181.jpeg"><img style="width:120px" src="freepik__make-a-survivor-game-character-that-have-backpack-__90181.jpeg"/></a></figure></li></ol><ol type="a" id="f860ee40-041f-42f1-ba2b-b512c0502ffb" class="numbered-list" start="2"><li>Survivor 2 (Sam) : Seorang Pria yang memiliki skill pendengaran yang tajam, Tinggi, Berbadan besar, memakai kemeja yang dimasukkan ke dalam celana cargo, memakai ikat pinggang, membawa tas ransel, memakai sarung tangan, sepatu boots hitam, headlamp, serta 2 tas pinggang.<figure id="16008d94-f2cc-8092-986c-f877c9675801" class="image" style="text-align:left"><a href="freepik__modern-style-detailled-illustration-make-a-survivo__90180.jpeg"><img style="width:120px" src="freepik__modern-style-detailled-illustration-make-a-survivo__90180.jpeg"/></a></figure></li></ol><ol type="a" id="7aeef539-9340-4d1c-b38c-030dfca5c435" class="numbered-list" start="3"><li>Survivor 3 (Helen) : Seorang wanita yang memiliki skill dapat mengobati teman dengan cepat, Pendek, Kurus, Rambut di kepang 2, memakai kemeja yang dimasukkan ke dalam celana cargo, memakai ikat pinggang, membawa tas ransel, memakai jam tangan, membawa alat dan memakai headlamp<figure id="16008d94-f2cc-802f-8b64-ecb5befb310f" class="image" style="text-align:left"><a href="freepik__survivor-game-character-female-hispanic-descent-lo__90184.jpeg"><img style="width:120px" src="freepik__survivor-game-character-female-hispanic-descent-lo__90184.jpeg"/></a></figure></li></ol><ol type="a" id="cb84ec34-0942-4269-afec-a3d7065d7d6f" class="numbered-list" start="4"><li>Survivor 4 (Viper) : Seorang wanita yang memiliki skill lari dengan cepat, Tinggi, Kurus, Rambut di ikat, memakai topi, memakai kemeja yang dimasukkan ke dalam celana cargo, memakai ikat pinggang, membawa tas ransel dan memakai jam tangan.<figure id="16008d94-f2cc-8024-9b10-f7ac45b5fb40" class="image" style="text-align:left"><a href="freepik__design-a-survivor-game-character-a-caucasian-girl-__90183.jpeg"><img style="width:120px" src="freepik__design-a-survivor-game-character-a-caucasian-girl-__90183.jpeg"/></a></figure></li></ol></li></ol><ol type="1" id="16008d94-f2cc-8066-98a5-d1531ec59acb" class="numbered-list" start="3"><li>Monster NPC (mini zombie): Membantu monster untuk melacak survivor  tetapi memiliki pergerakan yang sangat lambat.<figure id="16eb6840-0efc-4b91-adf8-cf3ebf059db8" class="image" style="text-align:left"><a href="Snipaste_2024-12-19_16-06-20.png"><img style="width:144px" src="Snipaste_2024-12-19_16-06-20.png"/></a></figure><p id="79059e32-388a-4d37-b3ff-8b72db3e06c3" class="">Ciri-Ciri Monster NPC : Seorang pria dengan tubuh tinggal tulang dan baju yang rusak berdarah-darah, memakai celana ripped jeans, berwajah seram dan pucat bermata merah seperti zombie.</p></li></ol></div></p><h1 id="16008d94-f2cc-802b-a89a-c8378209d609" class=""><strong>Spesifikasi Teknis</strong></h1><p id="a36b5e8a-4530-469f-a9fa-d8f0bf4398dd" class=""><strong>Bentuk Teknis</strong></p><p id="85471ac9-c0c8-4eff-97f8-35d53629bf1e" class="">Game ini menggunakan grafik 3D untuk visualisasi, menciptakan pengalaman bermain yang menarik dan menegangkan dengan struktur lingkungan yang detail. Pada game ini lingkungan digambarkan berada di sebuah desa yang terletak di tengah hutan, di dalamnya terdapat beberapa rumah, gudang/bengkel untuk mencari perlengkapan serta beberapa mobil rusak.</p><p id="bc9ff362-4ba5-4238-a0ed-78619fd02416" class=""><strong>Tampilan</strong></p><p id="3fb1bf40-e266-4598-84df-feecc34809c4" class="">Tampilan kamera adalah third-person perspective, memungkinkan pemain melihat karakter mereka sepenuhnya dan memberikan pandangan luas terhadap lingkungan sekitar.</p><h1 id="01322da1-9b11-44cd-aa3a-e34dd06d379e" class=""><strong>Gameplay</strong></h1><ul id="16008d94-f2cc-8041-b029-f18f56604f9e" class="toggle"><li><details open=""><summary>Objective</summary><ul id="16108d94-f2cc-80c8-b8f7-df987e090de4" class="bulleted-list"><li style="list-style-type:disc">👤 Survivor : Memperbaiki Mobil yang rusak dengan mengumpulkan component dan Bertahan hidup dari serangan monster.</li></ul><ul id="16108d94-f2cc-8018-8fb4-ca0306de3793" class="bulleted-list"><li style="list-style-type:disc">👾 Monster Pemburu : Menghalangi Survivor agar tidak dapat keluar dari hutan.</li></ul></details></li></ul><ul id="16108d94-f2cc-805b-bb50-e1072d4e9099" class="toggle"><li><details open=""><summary>Mekanika Permainan</summary><ul id="16008d94-f2cc-8062-a59f-cbd662cf71a2" class="toggle"><li><details open=""><summary>Alur Permainan</summary><p id="16108d94-f2cc-80be-b66c-c910a96d752f" class="">Suatu hari, empat orang sahabat memutuskan untuk berpetualang dengan melakukan camping di luar kota. Perjalanan mereka berjalan lancar hingga mereka tiba di sebuah hutan yang sangat lebat dan gelap. Ketika tengah melintasi jalanan yang sepi, pengemudi mendadak membanting setirnya karena melihat sosok hitam yang bergerak sangat cepat di pinggir jalan, menyebabkan dirinya terkejut. Tak mampu mengendalikan mobil, mereka terjatuh ke dalam jurang yang dalam, membuat kendaraan mereka rusak dikarenakan banyak bagian kendaraan yang rusak dan hilang.</p><p id="16108d94-f2cc-8003-87c4-ea1326952afa" class="">Di sinilah tantangan hidup mereka dimulai. Keempat survivor kini terperangkap di desa terbengkalai yang sepi, jauh dari peradaban. Tanpa pilihan lain, mereka harus bertahan hidup di tengah hutan yang mencekam, di mana mereka tidak hanya harus menghadapi kondisi alam yang keras, tetapi juga makhluk mengerikan yang berburu mereka—monster yang tak tampak, namun siap menyerang kapan saja.</p><p id="16108d94-f2cc-80a2-ad85-e9b86096d40a" class="">Untuk bertahan hidup, para survivor harus mencari berbagai komponen yang tersebar di sekitar desa yang ditinggalkan, yang dulu merupakan rumah bagi orang-orang yang kini hilang. Hanya dengan menemukan dan mengumpulkan bagian-bagian yang diperlukan, mereka bisa memperbaiki mobil mereka dan mencoba melarikan diri dari desa tersebut. Namun, mereka harus berhati-hati, karena para pemburu (pemain) yang memainkan monster selalu mengintai, siap untuk menangkap atau mengalahkan mereka sebelum mereka sempat melarikan diri.</p><p id="16108d94-f2cc-8018-9962-db5bf1e52634" class="">Bertahan hidup bukanlah hal yang mudah. Keputusan dan kerja sama antar pemain akan menjadi kunci untuk keluar dari desa yang dipenuhi bahaya ini.</p></details></li></ul><ul id="16108d94-f2cc-806b-b601-d66650949be8" class="toggle"><li><details open=""><summary>kontrol pemain</summary><ul id="16108d94-f2cc-80bc-ab21-f48fb3df4a25" class="bulleted-list"><li style="list-style-type:disc">Movement : gunakan key “ W “ untuk maju, “ S “ untuk mundur, “ A “ untuk begerak ke kiri, dan “ D “ untuk bergerak ke kanan.</li></ul><ul id="16108d94-f2cc-80a6-947c-c4e35d22f6c5" class="bulleted-list"><li style="list-style-type:disc">View : player bisa menggerakkan view menggunakan mouse.</li></ul><ul id="16108d94-f2cc-8012-bb7d-e3be311f6655" class="bulleted-list"><li style="list-style-type:disc">Melompat : gunakan key “spasi”</li></ul><ul id="26b122d4-7c16-44cb-b166-46b06167fd44" class="bulleted-list"><li style="list-style-type:disc">Interaksi : gunakan key “E”<ul id="f3cf3613-88e1-4cfb-b415-6a2664c3f513" class="bulleted-list"><li style="list-style-type:circle">Heal (Survivor only)</li></ul><ul id="c0ed6a31-170a-4941-8bfe-d2baec0558ab" class="bulleted-list"><li style="list-style-type:circle">Revive (Survivor only)</li></ul><ul id="40a1e71f-31de-4668-b717-5c022d1af40e" class="bulleted-list"><li style="list-style-type:circle">Melepas trap (Survivor only)</li></ul><ul id="5e64f3b2-c9c3-4e99-b569-186864799a3e" class="bulleted-list"><li style="list-style-type:circle">Menyelamatkan team mate (Survivor only)</li></ul><ul id="62a909b5-8895-4a59-9052-c8b7a18284dc" class="bulleted-list"><li style="list-style-type:circle">Mengambil barang (Survivor only)</li></ul><ul id="51af6ebb-4d67-4040-9d51-15d0cf85ef59" class="bulleted-list"><li style="list-style-type:circle">Memperbaiki mobil (Survivor only)</li></ul><ul id="4cf1ddf1-1dd9-41de-848a-a94fa7989684" class="bulleted-list"><li style="list-style-type:circle">Mengikat survivor yang telah knockdown (Monster only)</li></ul><ul id="a6d36c82-f2f8-4e04-a058-759e0b492a5a" class="bulleted-list"><li style="list-style-type:circle">Mengambil trap yang telah dipasang (Monster only)</li></ul></li></ul><ul id="16108d94-f2cc-80b7-9bf1-d6c72e043475" class="bulleted-list"><li style="list-style-type:disc">Menyerang (monster only) : menekan Klik Kiri Mouse (LMB)</li></ul><ul id="16108d94-f2cc-806f-854b-c0a56db1dff1" class="bulleted-list"><li style="list-style-type:disc">Control power senter (survivor only) : gunakan key “F”</li></ul><ul id="16108d94-f2cc-800a-93f6-e5fadfbee891" class="bulleted-list"><li style="list-style-type:disc">Pasang Trap (monster only) : menekan Klik Kanan Kouse (RMB)</li></ul><ul id="16108d94-f2cc-80a9-be4f-da984694ef09" class="bulleted-list"><li style="list-style-type:disc">Berjalan/Mengendap-endap (survivor only) : ginakan “Shift</li></ul></details></li></ul><ul id="16108d94-f2cc-808c-a722-dd2cc99dd7fd" class="toggle"><li><details open=""><summary>Mekanik Hitpoint dan Healing</summary><ul id="16108d94-f2cc-8075-8f21-da53ba1e9712" class="bulleted-list"><li style="list-style-type:disc"><strong>Hitpoint (HP)</strong>:<p id="16108d94-f2cc-800f-b001-f9e90ce9ea21" class="">Setiap pemain memulai permainan dengan <strong>HP 100%</strong>. Ketika <strong>HP pemain mencapai 0%</strong>, pemain akan <strong>knockdown</strong> dan tidak bisa bergerak atau bertindak sampai ada pemain lain yang membantu.</p></li></ul><ul id="16108d94-f2cc-80b0-96c1-d8fa7d0b5f87" class="bulleted-list"><li style="list-style-type:disc"><strong>Mekanik Healing</strong>:<p id="16108d94-f2cc-8062-994a-f0b04d102bcb" class="">Semua pemain bisa <strong>menyembuhkan pemain lain</strong>, tetapi mereka <strong>tidak bisa menyembuhkan diri sendiri</strong>. Proses penyembuhan ini <strong>lambat</strong>, sehingga membutuhkan waktu untuk mengembalikan HP pemain yang disembuhkan.</p><p id="16108d94-f2cc-805d-97a3-f5bdcad4fbe7" class="">Karakter <strong>Helen</strong> memiliki kemampuan untuk melakukan <strong>healing</strong> pada pemain lain dengan <strong>lebih cepat</strong>. Ia bisa menyembuhkan pemain dengan kecepatan yang jauh lebih efisien dibandingkan pemain lainnya. Namun, <strong>healing</strong> karakter Helen juga memiliki <strong>cooldown</strong> dan hanya bisa digunakan kembali setelah <strong>45 detik </strong>sama seperti pemain survivor lainnya.</p></li></ul></details></li></ul><ul id="16108d94-f2cc-80ae-bab3-d8705061b3c5" class="toggle"><li><details open=""><summary>Mekanik Headlamp dan Trap</summary><ul id="16108d94-f2cc-8036-8195-c48e2a7391c1" class="bulleted-list"><li style="list-style-type:disc"><strong>Mekanik Headlamp</strong>:<p id="16108d94-f2cc-80d9-948f-f0bc2a9785ce" class="">Pemain dapat menggunakan <strong>headlamp</strong> untuk <strong>menyetrun</strong> monster. Monster akan terstun selama <strong>1,5 detik</strong>, namun setelah itu, monster akan <strong>kebal terhadap cahaya</strong> selama <strong>15 detik</strong>, karena monster dapat beradaptasi. Setelah 15 detik, monster akan kembali rentan terhadap cahaya.</p></li></ul><ul id="16108d94-f2cc-8036-b4d1-f1ede87ca6f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Mekanik Trap</strong>:<p id="16108d94-f2cc-80d3-bc2f-d4b2fe66d086" class=""><strong>Bear trap</strong> dapat dipasang oleh monster di peta, dengan batas maksimal <strong>3 buah</strong> trap yang terpasang dalam satu waktu. Untuk memasang trap lagi, monster harus menunggu selama <strong>20 detik cooldown</strong>.</p><p id="16108d94-f2cc-8080-8403-f1f9b09c1886" class="">Ketika seorang pemain terkena <strong>trap</strong>, pemain akan langsung <strong>terstun</strong> dan tidak bisa bergerak sama sekali. Setelah berhasil <strong>melepaskan diri</strong> dalam waktu <strong>10 detik</strong>, pemain akan terkena efek <strong>pincang (slow)</strong> dan bergerak dengan kecepatan terbatas.</p><p id="16108d94-f2cc-80d1-bc4b-fe87193d8af5" class="">Selain itu, ketika pemain terkena trap, baik <strong>monster</strong> maupun <strong>survivor</strong> yang berada di sekitar area akan menerima notifikasi visual di layar. Notifikasi ini akan muncul di <strong>pojok layar</strong> (seperti di game FPS), yang menunjukkan <strong>arah</strong> di mana pemain yang terkena trap berada. Jika pemain yang terkena trap berada di sisi kiri peta, maka notifikasi akan muncul di <strong>pojok kiri layar</strong>. Sebaliknya, jika di sisi kanan, notifikasi akan muncul di <strong>pojok kanan layar</strong>. Notifikasi ini memberikan informasi bagi semua pemain tentang lokasi pemain yang terperangkap, membantu mereka untuk merencanakan aksi selanjutnya.</p></li></ul></details></li></ul><ul id="16108d94-f2cc-8028-93e0-c0d39110afd4" class="toggle"><li><details open=""><summary>Mekanik Menyerang Monster</summary><p id="16108d94-f2cc-80ce-9393-efe5574e3449" class="">Monster akan menyerang dengan cakarnya dengan cooldown 5 detik, setelah menyerang monster akan terkena stun (tidak bisa bergerak kemana-mana) selama 2 detik tepat setelah menyerang.</p></details></li></ul><ul id="16108d94-f2cc-80e2-986f-ff9dc7d5b51e" class="toggle"><li><details open=""><summary>Mekanik Pengumpulan Komponen</summary><p id="16108d94-f2cc-80d6-8efe-e4a39bd1d39e" class="">Pemain Survivor mengumpulkan berbagai resource komponen seperti ban, aki, baut, radiator, shock breaker, lamp, exhaust, hingga bensin. setiap pemain akan menemukan 1 persatu dan memasang nya pada mobil mereka agar dapat keluar dari desa itu.</p></details></li></ul></details></li></ul><ul id="16108d94-f2cc-80e0-91d1-c7eb63be81ae" class="toggle"><li><details open=""><summary>Progression and Levelling</summary><p id="56dabf7d-b5a7-4822-8dc9-7a40d94c1d65" class="">level player akan bertambah seiring banyaknya player menyelesaikan permainan. level berguna untuk balancing matchmacking agar seimbang.</p></details></li></ul><ul id="16108d94-f2cc-807a-9298-e54e70c98858" class="toggle"><li><details open=""><summary>Tantangan dan Rintangan</summary><ul id="16108d94-f2cc-80dd-9796-cb981b0c3c59" class="bulleted-list"><li style="list-style-type:disc">Time : survivor dan monster akan menerima tantangan yang sama yaitu waktu 10 menit selama pertandingan.</li></ul><ul id="16108d94-f2cc-80af-ae50-d0613c05efb4" class="bulleted-list"><li style="list-style-type:disc">dikejar monster : survivor selama pertandingan harus berlari dan bersembunyi dari kejaran monster yang bersiap menangkap mereka sepanjang permainan.</li></ul><ul id="16108d94-f2cc-807c-9225-cc1932900756" class="bulleted-list"><li style="list-style-type:disc">dikejar monster npc : monster npc akan disummon setiap 1 menit sekali berjalan mengarah ke survivor dan akan menghilang dalam 30 detik masuk ke dalam tanah.</li></ul></details></li></ul><h1 id="a8a0e212-82b5-4112-8ccd-e274a1bcaff0" class=""><strong>Fitur Utama</strong></h1><p id="16108d94-f2cc-8017-a635-fb66d83ccf8a" class=""><strong>Fitur Utama</strong></p><p id="16108d94-f2cc-80b4-9e8c-cee5197200fa" class="">berikut adalah fitur utama:</p><ul id="16108d94-f2cc-803e-bf56-c82d26cf130b" class="bulleted-list"><li style="list-style-type:disc"><strong>Mekanik Bertahan Hidup dan Kerja Sama Tim</strong><p id="7e5eab0e-1d16-43c7-8b7a-d47718bee0eb" class=""><strong>Survivor</strong></p><p id="16108d94-f2cc-804a-b371-fbb521f51d01" class="">Game ini menggabungkan elemen bertahan hidup yang menegangkan dengan kebutuhan untuk bekerja sama. Pemain yang berperan sebagai.</p><p id="16108d94-f2cc-806f-ac03-c4c052f7adcb" class="">Harus saling membantu untuk mengumpulkan komponen, memperbaiki mobil, dan bertahan hidup di tengah ancaman monster yang mengintai. Setiap keputusan dan aksi kolektif sangat menentukan kelangsungan hidup tim, sehingga kerjasama yang solid antara pemain sangat penting untuk melarikan diri dari desa terbengkalai tersebut.</p></li></ul><ul id="16108d94-f2cc-80d8-aab4-cfec7dc7b828" class="bulleted-list"><li style="list-style-type:disc"><strong>Interaksi dengan Lingkungan yang Intuitif</strong><p id="16108d94-f2cc-80a5-8775-d35169a7b326" class="">Game ini memberi pemain banyak kebebasan untuk berinteraksi dengan lingkungan, seperti <strong>memperbaiki mobil</strong>, <strong>mengambil barang</strong>, <strong>menggunakan headlamp</strong>, atau <strong>memasang trap</strong>. Semua ini dilakukan dengan tombol interaksi yang sederhana dan intuitif (misalnya, menggunakan tombol &quot;E&quot; untuk interaksi), memungkinkan pemain untuk fokus pada taktik dan keputusan strategis. Interaksi ini memberi pemain rasa keterlibatan dan membuat dunia game terasa hidup.</p></li></ul><ul id="16108d94-f2cc-80d0-87bc-c1bf95d2f168" class="bulleted-list"><li style="list-style-type:disc"><strong>Visual dan Atmosfer yang Mencekam</strong><p id="16108d94-f2cc-80c9-82c2-c3c86d4aa7dd" class="">Dengan latar belakang desa terbengkalai yang gelap dan hutan yang lebat, visual game ini menciptakan atmosfer yang mencekam dan memikat. Pencahayaan dinamis, terutama dengan penggunaan <strong>headlamp </strong>untuk men-strun monster, menambah ketegangan visual. Lingkungan yang penuh detail dan efek suara yang menakutkan memberikan pengalaman imersif yang memperkuat nuansa survival horror dalam permainan.</p></li></ul><p id="16108d94-f2cc-80cc-b904-cd5a5ca115d0" class=""><strong>Fitur Khusus</strong></p><p id="16108d94-f2cc-8010-acbe-eb30f05857ac" class="">Setiap karakter memiliki kelebihannya masing-masing yaitu :</p><ul id="16108d94-f2cc-8080-9579-dbf4f5b8481d" class="bulleted-list"><li style="list-style-type:disc">scan tembus pandang x-ray agar mudah menemukan komponen.</li></ul><ul id="16108d94-f2cc-8044-b635-cf01414fec81" class="bulleted-list"><li style="list-style-type:disc">pendengaran yang tajam sehingga memudah kan mendengarkan step musuh.</li></ul><ul id="16108d94-f2cc-80ad-a2e0-ece112176255" class="bulleted-list"><li style="list-style-type:disc">bisa mengobati rekan lain dengan sangat cepat.</li></ul><ul id="16108d94-f2cc-805a-8841-f810ed82b60e" class="bulleted-list"><li style="list-style-type:disc">memiliki skill lari dengan cepat dibandingkan dengan rekan lain.</li></ul><h1 id="12a4bd5b-5519-4c51-ba23-4f237835657f" class=""><strong>Dokumen Desain</strong></h1><p id="a12981f9-7235-4cfb-8a93-2647dececf9b" class="">Cara Kerja Objek dalam Game :</p><ol type="1" id="199c1be6-b22f-4fd7-be2c-2db9925df3c0" class="numbered-list" start="1"><li>Survivor : Karakter memiliki kesehatan terbatas dan keterampilan unik. Mereka dapat berinteraksi dengan lingkungan untuk mencari sumber daya dan memperbaiki mobil.</li></ol><ol type="1" id="6be875cb-3a4e-402d-82d9-5fd8ffdf29e8" class="numbered-list" start="2"><li>Monster Pemburu : Karakter kuat dengan kemampuan mendeteksi dan menyerang survivor</li></ol><ol type="1" id="24857f69-7ed3-4f1d-9181-f525a6d1b673" class="numbered-list" start="3"><li>Monster NPC : Bergerak lambat tetapi dapat membantu melacak survivor</li></ol><ol type="1" id="2457a72e-6330-4c82-b46e-c3c8c2494de1" class="numbered-list" start="4"><li>Mobil : Objek utama yang harus diperbaiki oleh survivor untuk memenangkan permainan.</li></ol><ol type="1" id="4451dd0a-23c9-44b0-bbe5-e0681d828752" class="numbered-list" start="5"><li>Komponen Mobil : Tersebar di berbagai lokasi gudang/bengkel, memerlukan strategi dan kerja sama untuk menemukannya</li></ol><h1 id="12f1908d-aeb0-4bdf-b554-fe78450e27d2" class=""><strong>Panduan Desain</strong></h1><p id="8e7040d3-b656-4862-a7f5-9c492d55dd61" class="">Batasan Kreatif :</p><ol type="1" id="d68f48da-d1b6-4c74-b042-31c1547df187" class="numbered-list" start="1"><li>Lingkungan harus cukup gelap untuk menciptakan suasana tegang, namun tetap memungkinkan pemain melihat dan berinteraksi dengan objek.</li></ol><ol type="1" id="da7bfab0-b48b-4dc0-a6d9-d2bc9ad802f0" class="numbered-list" start="2"><li>Durasi satu sesi permainan maksimal 10 menit untuk mempertahankan ketegangan dan mencegah kebosanan. Jika lebih dari 10 menit maka game akan otomatis selesai dan survivor dianggap kalah karena tidak dapat menyelesaikan permainan.</li></ol><ol type="1" id="61b13f74-6532-4411-b850-8d01b1e174a7" class="numbered-list" start="3"><li>Monster NPC harus menjadi ancaman tambahan, namun tidak boleh mengambil alih peran monster utama dalam memburu survivor</li></ol><ol type="1" id="b88037e2-46df-48ff-ad27-f7e0b935a924" class="numbered-list" start="4"><li>Desain monster harus menyeramkan namun tidak menjijikkan agar dapat menarik pemain dengan berbagai tingkat toleransi terhadap unsur-unsur horor.</li></ol><ol type="1" id="65bb0eea-37d1-4313-8b72-ad37b2c9c0b1" class="numbered-list" start="5"><li>Sumber daya/perlengkapan yang dibutuhkan untuk memperbaiki mobil harus relatif sulit didapatkan, agar membuat pemain menjadi tertantang, tetapi juga tidak langka agar pemain tidak frustasi.</li></ol><ol type="1" id="493ee6ee-c17a-49a7-b67d-f0db3cf75521" class="numbered-list" start="6"><li>Keterampilan dan kemampuan harus seimbang sehingga tidak ada peran yang dominan, baik survivor maupun monster.</li></ol><ol type="1" id="afcc5668-72b6-4ae9-b978-0005a307c31f" class="numbered-list" start="7"><li>Tidak ada konten sensitif yang dapat menyinggung kelompok tertentu, seperti elemen cerita yang kontroversial.</li></ol><p id="cca0c389-b923-41d1-80a5-b2a8f9456d14" class="">Tujuan Desain :</p><ol type="1" id="c94722e1-83e1-4d36-bbe3-0cb0fc83e01e" class="numbered-list" start="1"><li>Desain lingkungan bertujuan menciptakan kondisi yang mencekam dengan pencahayaan minim dan efek suara menyeramkan.</li></ol><ol type="1" id="cd30d72a-08ee-4b17-9c89-ed9293d96cad" class="numbered-list" start="2"><li>Elemen visual dan suara memperkuat tema horor dan menciptakan suasana tegang.</li></ol><ol type="1" id="8a0c2166-6d46-46b6-9d3c-cae25dcccc4b" class="numbered-list" start="3"><li>Gameplay dibuat agar menciptakan keseruan antara survivor dan monster, dengan penekanan pada kerja sama tim dan strategi.</li></ol><h1 id="d5be4876-6e27-436f-be51-ace8b04d0e7a" class=""><strong>Definisi Desain Game</strong></h1><ul id="9066d56e-8ed3-4178-b09c-7956089d2c90" class="toggle"><li><details open=""><summary>Cara Pemain Menang atau Kalah</summary><ul id="4b0e6b90-b869-4c5e-9424-f6118b97a951" class="bulleted-list"><li style="list-style-type:disc">Survivor<br/>Pemain mencari dan mengumpulkan komponen mobil yang dibutuhkan. Memperbaiki mobil jika komponen telah terkumpulkan kemudian melalikan diri dari desa. Minimal ada 1 orang yang mampu melarikan diri sebelum waktu yang ditentukan (kabut semakin tebal)<br/></li></ul><ul id="aebbbd3b-daaa-48cc-a70a-cc3fe1d1f171" class="bulleted-list"><li style="list-style-type:disc">Pemburu<br/>Pemain berhasil menangkap dan membunuh semua survivor secara permanen sebelum menyelesaikan misi memperbaiki mobil<br/></li></ul></details></li></ul><ul id="c0de3348-d33c-4411-a112-8770e5a72871" class="toggle"><li><details open=""><summary>Fokus Utama Gameplay</summary><ol type="1" id="4b95ecf1-dfd6-473b-9501-17295466b941" class="numbered-list" start="1"><li>Survivor<br/><br/><strong>Kerja sama tim : </strong>strategi untuk membagi tugas, menyelamatkan teman, dan melarikan diri.<br/><br/><strong>Manajemen risiko </strong>: menyeimbangkan antara mencari komponen dan menjaga keselamatan dari pemburu.<br/><br/><strong>Ketegangan tinggi</strong> : atmosfer horor dan perasaan terancam yang konstan untuk menciptakan rasa takut.</li></ol><ol type="1" id="8942310f-ec2e-4797-98fb-d0d84feb0a09" class="numbered-list" start="2"><li>Pemburu<br/><br/><strong>Dominasi </strong>: memiliki kendali penuh untuk menciptakan ancaman melalui jebakan atau serangan langsung.<strong><br/>Strategi berburu <br/></strong>: memanfaatkan suara dan jebakan untuk mempermainkan survivor.</li></ol></details></li></ul><h1 id="da2c7268-8da7-480d-a0c7-e944a9927063" class=""><strong>Diagram Alur Game</strong></h1><figure id="ecd04d90-6422-41f7-91c9-af7b41b0d5a2" class="image"><a href="theSilentHunt.png"><img style="width:624px" src="theSilentHunt.png"/></a></figure><ol type="1" id="d4884ffd-da78-4026-88ea-4950d88683a8" class="numbered-list" start="1"><li><strong>Menu Utama </strong>: Pilih peran → Pilih role → Mulai permainan.</li></ol><ol type="1" id="b8a05304-37cd-486d-83f8-2a20045ca485" class="numbered-list" start="2"><li><strong>Gameplay </strong>:<ol type="a" id="926c5a39-a2ca-44af-8bfe-6579a2c3cbdd" class="numbered-list" start="1"><li>Survivor : Eksplorasi → Cari komponen → Hindari monster → Perbaiki mobil → Kabur.</li></ol><ol type="a" id="fe9d5545-1657-4cb3-8ca7-9601e530cb55" class="numbered-list" start="2"><li>Monster : Cari survivor → Serang survivor → Membunuh survivor.</li></ol></li></ol><ol type="1" id="1d4e02f7-606d-437c-adab-3b329fde524e" class="numbered-list" start="3"><li><strong>Kondisi Akhir </strong>: Survivor berhasil kabur atau semua survivor terbunuh.</li></ol><h1 id="a0899833-10d4-434a-8e99-e6a06a902922" class=""><strong>Definisi Pemain</strong></h1><p id="b5758c16-4241-469d-9056-bafa5479a055" class=""><strong>Properti Pemain</strong></p><ol type="1" id="981abb0f-a817-40e2-93f1-43eb4540f60c" class="numbered-list" start="1"><li>Survivor :<ol type="a" id="4b2d1c6f-4910-4edb-a6aa-c2112e63dc8a" class="numbered-list" start="1"><li>Kesehatan : Menurun saat di serang monster</li></ol><ol type="a" id="9d9c137d-4619-4263-8228-ae910151b6ba" class="numbered-list" start="2"><li>Kemampuan : Membantu mencari, mendengar, mengobati atau melarikan diri.</li></ol></li></ol><ol type="1" id="1943c89f-2949-460a-95f6-c53e8d1dc046" class="numbered-list" start="2"><li>Monster :<ol type="a" id="c4540ae4-5290-497e-bc3a-07e5ff389b84" class="numbered-list" start="1"><li>Kekuatan : Menyerang survivor</li></ol><ol type="a" id="3d0550f7-03a8-4468-b686-de5b63adc861" class="numbered-list" start="2"><li>Kemampuan : Mendeteksi survivor dan membunuh survivor</li></ol></li></ol><p id="3e3758e3-d767-47d7-895a-25f1223d316a" class=""><strong>Hadiah Pemain</strong></p><ol type="1" id="85c8babc-3198-4e06-9da5-e66cd8894045" class="numbered-list" start="1"><li>Bagi pemain yang berhasil menyelesaikan permainan maka akan mendapatkan experience point dan score result dari performa pemain.</li></ol><ol type="1" id="37da4721-cfc5-4559-8aec-5847e3e796a5" class="numbered-list" start="2"><li>Bagi pemain yang menang akan mendapatkan Point Rank.</li></ol><ol type="1" id="2a111b48-40e5-4b2d-9c67-121d634dea0b" class="numbered-list" start="3"><li>Bagi pemain yang kalah maka Point Rank akan berkurang.</li></ol><p id="5b08a11b-66b0-44cb-9b7b-2af3ec3d97c7" class="">
+</p><h1 id="e341f090-8e70-4a15-b13f-b9dd63214a7b" class=""><strong>Antarmuka Pengguna (UI)</strong></h1><ol type="1" id="16008d94-f2cc-80b4-983e-cd31170ad03f" class="numbered-list" start="1"><li>HOME SCREEN<figure id="685c6e20-81a3-4479-b0db-af0c179f4864" class="image"><a href="home.png"><img style="width:679.9874877929688px" src="home.png"/></a></figure></li></ol><ol type="1" id="fcc88414-830e-47fa-9149-047f305e78ac" class="numbered-list" start="2"><li>CHOOSE ROLE<figure id="715e7942-0ce3-4196-95c8-71aed0890596" class="image"><a href="choose_1.png"><img style="width:679.9874877929688px" src="choose_1.png"/></a></figure></li></ol><ol type="1" id="63054fde-4995-4bf6-a47b-032744e2a2fa" class="numbered-list" start="3"><li>CHOOSE CHARACTER (SURVIVOR)<figure id="2d106091-fa25-4a6d-bd50-fbb9dc4bf339" class="image"><a href="choose_2.png"><img style="width:679.9874877929688px" src="choose_2.png"/></a></figure></li></ol><ol type="1" id="2b9679d8-084c-4cc5-bb3f-b9e966f30220" class="numbered-list" start="4"><li>GAMEPLAY IN GAME<figure id="c64e009b-0390-46b3-85d0-72d36c233aaa" class="image"><a href="in_game.png"><img style="width:679.9874877929688px" src="in_game.png"/></a></figure></li></ol><ol type="1" id="0f5c2cb7-90b8-49fb-bfee-12c119fe183a" class="numbered-list" start="5"><li>LAYOUT MAP GAME<figure id="d96c8925-37ee-4595-af73-9c7a5bf87fe3" class="image" style="text-align:center"><a href="Snipaste_2024-12-18_18-40-08.png"><img style="width:336px" src="Snipaste_2024-12-18_18-40-08.png"/></a></figure></li></ol><p id="16008d94-f2cc-80f5-af60-f145793fa7b2" class="">
+</p><p id="16108d94-f2cc-8076-b319-d3d51bd604e0" class="">
+</p><p id="16108d94-f2cc-80c1-823c-dc26104b1670" class="">
+</p><hr id="16108d94-f2cc-80da-b392-dd5875d08c0a"/><h2 id="16108d94-f2cc-80d8-9e6e-e982ddf15c43" class="">Nama Kelompok :</h2><ol type="1" id="16108d94-f2cc-80a3-b02e-e88d5bb4c43c" class="numbered-list" start="1"><li><strong>Pramudya Putra P                  (E41222181)</strong></li></ol><ol type="1" id="16108d94-f2cc-803a-9979-fd68d673b1b6" class="numbered-list" start="2"><li><strong>Afrizal Wahyu Alkautsar       (E41222030)</strong></li></ol><ol type="1" id="16108d94-f2cc-8025-b32f-f70979a2d271" class="numbered-list" start="3"><li><strong>Moch Daffa Frisly O               (E41211520)</strong></li></ol><ol type="1" id="16108d94-f2cc-80c4-b893-c012fd7682a0" class="numbered-list" start="4"><li><strong>Septian Yoga P                        (E41222006)</strong></li></ol><ol type="1" id="16108d94-f2cc-8065-a5e8-ce89896a2c18" class="numbered-list" start="5"><li><strong>Ninik Yuniarsih                        (E41222753)</strong></li></ol><ol type="1" id="16108d94-f2cc-80d4-9aa6-e7630f9c17e0" class="numbered-list" start="6"><li><strong>Widyasari Raisya Salsabilla (E41222892)</strong></li></ol><p id="16108d94-f2cc-8037-8f46-f650708fa464" class="">
+</p><p id="b60643b5-fb15-498e-a4bd-aade9bfe7dc5" class="">
+</p><p id="16008d94-f2cc-80ec-b302-eff0bc6e294f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
